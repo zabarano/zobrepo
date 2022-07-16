@@ -202,6 +202,7 @@ def detect_image(image_path):
     stream = io.BytesIO(srcfile.read())	
 	image_bytearray = stream.getvalue()
     """
+	# todo remove the hard coding of the access key and secret key
     client = boto3.client('textract',region_name='us-east-2',aws_access_key_id='XX',aws_secret_access_key='XXXX')
     response = client.detect_document_text(Document={'Bytes':     image_bytearray}   )
     with open(os.path.splitext(image_path)[0]+ '.json', 'w') as jsonfile:

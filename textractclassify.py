@@ -12,7 +12,7 @@ from pathlib import Path
 import re
 
 
-
+#streaming images to textract without using S3 storage.
 
 # Displays information about a block returned by text detection and text analysis
 def DisplayBlockInformation(block, counter):
